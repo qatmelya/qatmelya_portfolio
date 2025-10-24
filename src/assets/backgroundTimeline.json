@@ -1,0 +1,66 @@
+[
+  {
+    "date_text": "July-September 2024",
+    "title": "Data Scientist Intern at imec (Leuven, Belgium)",
+    "description": "At imec, I worked on deep learning applications for semiconductor device modeling. I developed a modular prediction pipeline that transformed transistor measurement data from nested JSON structures into NumPy arrays, enabling real-world data to be used directly in CNN models. By refining preprocessing methods and model architectures in TensorFlow, I improved overall model accuracy and performance. I also presented weekly progress reports to mentors and project managers, strengthening both my technical and communication skills.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "July-August 2023",
+    "title": "Web Development Intern at Sigorta Bilgi ve Gözetim Merkezi (İstanbul, Turkey)",
+    "description": "Developed a full-stack insurance premium calculation system using Java Spring Boot, MSSQL, and Thymeleaf. Applied Domain Driven Design for a clean and maintainable architecture, built asynchronous database connections with r2dbc, and wrote unit tests with JUnit5. This project helped me refine my backend development skills, improve my understanding of enterprise-level code structure, and work effectively in an agile, collaborative environment.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "Sept 2023-Dec 2024",
+    "title": "Image Classification of Diseased Plants, Research Project for TÜBİTAK 2209-A",
+    "description": "Contributed to a research project focused on agricultural image classification. Implemented image preprocessing using OpenCV and NumPy, and evaluated multiple classification algorithms to determine optimal performance. This project reinforced my ability to apply machine learning techniques to practical, real-world problems and analyze model performance systematically.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "Oct-Dec 2023",
+    "title": "AI Integrated Image Classification Website, Freelance Project for Auctifera Scientific",
+    "description": "Developed a Next.js + MySQL web platform for a medical research startup conducting AI-based image classification. Integrated their existing AI model into the web application, enabling users to upload images and view classification results in real time. This freelance project allowed me to combine frontend, backend, and AI integration into a single, production-level product.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "Apr-Dec 2022",
+    "title": "Backend Development, Freelance Project for Fal Dünyası",
+    "description": "Built and maintained the backend system for a mobile application using ASP.NET Core 3.1 and Entity Framework. Implemented secure authentication mechanisms with JWTs and cookies, and collaborated with mobile developers to define and optimize API endpoints. This experience strengthened my understanding of API design, security, and backend scalability.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "May 2022",
+    "title": "IBB & Microsoft Sustainable Cities Datathon",
+    "description": "Developed a bus scheduling optimization system using Azure Image Classification services and occupancy data to improve public transport efficiency.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "Dec 2022",
+    "title": "Shell Datathon",
+    "description": "Preprocessed sales data and trained an XGBoost model for forecasting, improving accuracy through feature engineering and hyperparameter tuning.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  },
+  {
+    "date_text": "Sept 2022-Feb 2023",
+    "title": "Python Tutor at Sarıyer Akademi",
+    "description": "Taught Python programming and object-oriented principles to middle school students, guiding them through exercises and final projects. This experience strengthened my leadership, patience, and ability to simplify complex concepts for others.",
+    "link": "",
+    "link_text": "",
+    "link_external": false
+  }
+]
