@@ -25,7 +25,7 @@ export default {
                     class="mx-2 mt-auto text-xl hover:scale-115 transform transition duration-300">
                     {{ page.text }}
                 </RouterLink>
-                <p v-if="index != pages.length - 1" class="mx-2 mt-auto text-xl">|</p>
+                <p v-if="index != pages.length - 1" class="mx-2 mt-auto text-xl select-none">|</p>
             </template>
         </ul>
         <button
