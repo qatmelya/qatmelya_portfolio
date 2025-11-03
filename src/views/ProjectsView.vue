@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, computed, onMounted, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import ProjectCard, { type Project } from '@/components/ProjectCard.vue'
 import ProjectModal from '@/components/ProjectModal.vue'
 // switched to fetching from public/projects.json
 
 const route = useRoute()
+const router = useRouter()
 const projects = ref<Project[]>([])
 const loadError = ref<string | null>(null)
 
@@ -18,10 +19,27 @@ onMounted(async () => {
     }
     const data = (await res.json()) as Project[]
     projects.value = data
+    // Open modal if project query is present
+    const projectId = typeof route.query.project === 'string' ? route.query.project : null
+    if (projectId) {
+      const found = projects.value.find((p) => p.id === projectId) || null
+      if (found) openModal(found)
+    }
   } catch (e: any) {
     loadError.value = e?.message ?? 'Failed to load projects'
   }
 })
+
+// React to changes in ?project=<id>
+watch(
+  () => route.query.project,
+  (val) => {
+    const projectId = typeof val === 'string' ? val : null
+    if (!projectId) return
+    const found = projects.value.find((p) => p.id === projectId) || null
+    if (found) openModal(found)
+  }
+)
 const selectedProject = ref<Project | null>(null)
 const isModalOpen = ref(false)
 
@@ -52,6 +70,10 @@ function closeModal() {
   setTimeout(() => {
     selectedProject.value = null
   }, 300)
+  // Remove project query from URL
+  const newQuery = { ...route.query }
+  delete (newQuery as any).project
+  router.replace({ query: newQuery })
 }
 </script>
 
