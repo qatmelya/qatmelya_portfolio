@@ -1,10 +1,17 @@
 <script setup lang="ts">
 import Timeline from '@/components/Timeline.vue'
 import backgroundTimeline from '@/assets/backgroundTimeline.json'
+
+// Define technologies - split items with parentheses into separate technologies
+const backendTechs = ['Java', 'Spring Boot', 'C#', '.NET Core', 'Node.js']
+const frontendTechs = ['React', 'Next.js', 'Thymeleaf']
+const dataAiTechs = ['Python', 'TensorFlow', 'Scikit-learn', 'BigQuery']
+const databaseTechs = ['MSSQL', 'MySQL']
+const toolsTechs = ['Git', 'Docker', 'Linux']
 </script>
 
 <template>
-  <div class="grid grid-cols-2">
+  <div class="grid grid-cols-2 overflow-hidden">
     <main id="about" class="flex flex-col overflow-scroll h-[90vh] px-8 mx-2 mt-6 col-end-0">
       <section id="about-me" class="py-4 border-b-2 border-zinc-700 dark:border-zinc-400 px-4">
         <h1 class="text-4xl font-bold">About Me</h1>
@@ -34,10 +41,7 @@ import backgroundTimeline from '@/assets/backgroundTimeline.json'
           </p>
         </div>
       </section>
-      <section
-        id="career-focus"
-        class="py-4 mb-20 border-b-2 border-zinc-700 dark:border-zinc-400 px-4"
-      >
+      <section id="career-focus" class="py-4 border-b-2 border-zinc-700 dark:border-zinc-400 px-4">
         <h1 class="text-4xl font-bold">Career Focus</h1>
         <div class="text-lg mt-2 text-zinc-700 dark:text-zinc-300">
           <p class="indent-10">
@@ -58,6 +62,86 @@ import backgroundTimeline from '@/assets/backgroundTimeline.json'
             <span class="font-semibold"> cross-functional teams </span>
             , and continue growing as a software engineer and data professional.
           </p>
+        </div>
+      </section>
+      <section
+        id="core-competencies"
+        class="py-4 mb-20 border-b-2 border-zinc-700 dark:border-zinc-400 px-4"
+      >
+        <h1 class="text-4xl font-bold">Core Competencies</h1>
+        <div class="text-lg mt-2 text-zinc-700 dark:text-zinc-300">
+          <div class="mt-4 space-y-4">
+            <div>
+              <h2 class="text-2xl font-semibold mb-2">Backend</h2>
+              <p class="indent-4">
+                <template v-for="(tech, index) in backendTechs" :key="tech">
+                  <RouterLink
+                    :to="{ path: '/projects', query: { filter: tech } }"
+                    class="text-zinc-600 dark:text-zinc-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 hover:underline cursor-pointer transition-colors"
+                  >
+                    {{ tech }}
+                  </RouterLink>
+                  <span v-if="index < backendTechs.length - 1">, </span>
+                </template>
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-semibold mb-2">Frontend</h2>
+              <p class="indent-4">
+                <template v-for="(tech, index) in frontendTechs" :key="tech">
+                  <RouterLink
+                    :to="{ path: '/projects', query: { filter: tech } }"
+                    class="text-zinc-600 dark:text-zinc-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 hover:underline cursor-pointer transition-colors"
+                  >
+                    {{ tech }}
+                  </RouterLink>
+                  <span v-if="index < frontendTechs.length - 1">, </span>
+                </template>
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-semibold mb-2">Data & AI</h2>
+              <p class="indent-4">
+                <template v-for="(tech, index) in dataAiTechs" :key="tech">
+                  <RouterLink
+                    :to="{ path: '/projects', query: { filter: tech } }"
+                    class="text-zinc-600 dark:text-zinc-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 hover:underline cursor-pointer transition-colors"
+                  >
+                    {{ tech }}
+                  </RouterLink>
+                  <span v-if="index < dataAiTechs.length - 1">, </span>
+                </template>
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-semibold mb-2">Databases</h2>
+              <p class="indent-4">
+                <template v-for="(tech, index) in databaseTechs" :key="tech">
+                  <RouterLink
+                    :to="{ path: '/projects', query: { filter: tech } }"
+                    class="text-zinc-600 dark:text-zinc-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 hover:underline cursor-pointer transition-colors"
+                  >
+                    {{ tech }}
+                  </RouterLink>
+                  <span v-if="index < databaseTechs.length - 1">, </span>
+                </template>
+              </p>
+            </div>
+            <div>
+              <h2 class="text-2xl font-semibold mb-2">Tools</h2>
+              <p class="indent-4">
+                <template v-for="(tech, index) in toolsTechs" :key="tech">
+                  <RouterLink
+                    :to="{ path: '/projects', query: { filter: tech } }"
+                    class="text-zinc-600 dark:text-zinc-400 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 hover:underline cursor-pointer transition-colors"
+                  >
+                    {{ tech }}
+                  </RouterLink>
+                  <span v-if="index < toolsTechs.length - 1">, </span>
+                </template>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

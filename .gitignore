@@ -31,3 +31,7 @@ coverage
 
 test-results/
 playwright-report/
+public/blogs/**
+public/images/blogs/**
+public/images/projects/**
+public/projects.json
