@@ -57,13 +57,18 @@ onMounted(async () => {
             Recent Projects
           </h2>
           <div class="min-h-48">
-            <ProjectCarousel v-if="!loadingProjects && carouselItems.length" :items="carouselItems" />
+            <ProjectCarousel
+              v-if="!loadingProjects && carouselItems.length"
+              :items="carouselItems"
+            />
             <div v-else class="h-48 rounded-lg bg-zinc-200 dark:bg-zinc-800 animate-pulse" />
           </div>
         </div>
         <div>
           <h2 class="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">Services</h2>
-          <div class="h-48 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-400">
+          <div
+            class="h-48 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-400"
+          >
             Coming soon
           </div>
         </div>

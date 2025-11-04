@@ -38,7 +38,7 @@ watch(
     if (!projectId) return
     const found = projects.value.find((p) => p.id === projectId) || null
     if (found) openModal(found)
-  }
+  },
 )
 const selectedProject = ref<Project | null>(null)
 const isModalOpen = ref(false)
