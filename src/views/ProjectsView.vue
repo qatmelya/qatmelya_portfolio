@@ -25,8 +25,8 @@ onMounted(async () => {
       const found = projects.value.find((p) => p.id === projectId) || null
       if (found) openModal(found)
     }
-  } catch (e: any) {
-    loadError.value = e?.message ?? 'Failed to load projects'
+  } catch (e: unknown) {
+    loadError.value = e instanceof Error ? e.message : 'Failed to load projects'
   }
 })
 
@@ -72,7 +72,7 @@ function closeModal() {
   }, 300)
   // Remove project query from URL
   const newQuery = { ...route.query }
-  delete (newQuery as any).project
+  delete newQuery.project
   router.replace({ query: newQuery })
 }
 </script>
