@@ -1,9 +1,9 @@
 name: Build and Deploy
 
-on: 
+on:
   push:
     branches:
-    - main
+      - main
   workflow_dispatch:
 
 jobs:
@@ -17,14 +17,14 @@ jobs:
       - run: npm run build
       - shell: bash
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY-aws }}
         name: Get SSH Key and set permissions
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
       - shell: bash
         env:
-          SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER-aws }}
+          SSH_HOST: ${{ secrets.SSH_HOST-aws }}
         name: Deploy using scp
         run: scp -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa -r ./dist/* "$SSH_USER"@"$SSH_HOST":~/portfolio-site
