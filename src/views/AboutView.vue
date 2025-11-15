@@ -11,11 +11,17 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
 </script>
 
 <template>
-  <div class="grid grid-cols-2 overflow-hidden">
-    <main id="about" class="flex flex-col overflow-scroll h-[90vh] px-8 mx-2 mt-6 col-end-0">
-      <section id="about-me" class="py-4 border-b-2 border-zinc-700 dark:border-zinc-400 px-4">
-        <h1 class="text-4xl font-bold">About Me</h1>
-        <div class="text-lg mt-2 text-zinc-700 dark:text-zinc-300">
+  <div class="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
+    <main
+      id="about"
+      class="flex flex-col overflow-scroll h-auto md:h-[90vh] px-4 md:px-8 mx-2 mt-6 col-end-0"
+    >
+      <section
+        id="about-me"
+        class="py-4 border-b-2 border-zinc-700 dark:border-zinc-400 px-2 md:px-4"
+      >
+        <h1 class="text-2xl md:text-4xl font-bold">About Me</h1>
+        <div class="text-base md:text-lg mt-2 text-zinc-700 dark:text-zinc-300">
           <p class="indent-10">
             I'm a <span class="font-semibold">Full-Stack Developer and Data Scientist</span> with a
             strong background in
@@ -41,9 +47,12 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
           </p>
         </div>
       </section>
-      <section id="career-focus" class="py-4 border-b-2 border-zinc-700 dark:border-zinc-400 px-4">
-        <h1 class="text-4xl font-bold">Career Focus</h1>
-        <div class="text-lg mt-2 text-zinc-700 dark:text-zinc-300">
+      <section
+        id="career-focus"
+        class="py-4 border-b-2 border-zinc-700 dark:border-zinc-400 px-2 md:px-4"
+      >
+        <h1 class="text-2xl md:text-4xl font-bold">Career Focus</h1>
+        <div class="text-base md:text-lg mt-2 text-zinc-700 dark:text-zinc-300">
           <p class="indent-10">
             I'm passionate about
             <span class="font-semibold">
@@ -66,13 +75,13 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
       </section>
       <section
         id="core-competencies"
-        class="py-4 mb-20 border-b-2 border-zinc-700 dark:border-zinc-400 px-4"
+        class="py-4 mb-8 md:mb-20 border-b-2 border-zinc-700 dark:border-zinc-400 px-2 md:px-4"
       >
-        <h1 class="text-4xl font-bold">Core Competencies</h1>
-        <div class="text-lg mt-2 text-zinc-700 dark:text-zinc-300">
+        <h1 class="text-2xl md:text-4xl font-bold">Core Competencies</h1>
+        <div class="text-base md:text-lg mt-2 text-zinc-700 dark:text-zinc-300">
           <div class="mt-4 space-y-4">
             <div>
-              <h2 class="text-2xl font-semibold mb-2">Backend</h2>
+              <h2 class="text-xl md:text-2xl font-semibold mb-2">Backend</h2>
               <p class="indent-4">
                 <template v-for="(tech, index) in backendTechs" :key="tech">
                   <RouterLink
@@ -86,7 +95,7 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
               </p>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-2">Frontend</h2>
+              <h2 class="text-xl md:text-2xl font-semibold mb-2">Frontend</h2>
               <p class="indent-4">
                 <template v-for="(tech, index) in frontendTechs" :key="tech">
                   <RouterLink
@@ -100,7 +109,7 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
               </p>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-2">Data & AI</h2>
+              <h2 class="text-xl md:text-2xl font-semibold mb-2">Data & AI</h2>
               <p class="indent-4">
                 <template v-for="(tech, index) in dataAiTechs" :key="tech">
                   <RouterLink
@@ -114,7 +123,7 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
               </p>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-2">Databases</h2>
+              <h2 class="text-xl md:text-2xl font-semibold mb-2">Databases</h2>
               <p class="indent-4">
                 <template v-for="(tech, index) in databaseTechs" :key="tech">
                   <RouterLink
@@ -128,7 +137,7 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
               </p>
             </div>
             <div>
-              <h2 class="text-2xl font-semibold mb-2">Tools</h2>
+              <h2 class="text-xl md:text-2xl font-semibold mb-2">Tools</h2>
               <p class="indent-4">
                 <template v-for="(tech, index) in toolsTechs" :key="tech">
                   <RouterLink
@@ -146,7 +155,7 @@ const toolsTechs = ['Git', 'Docker', 'Linux']
       </section>
     </main>
 
-    <aside>
+    <aside class="mt-4 md:mt-0">
       <Timeline v-bind:timelineData="backgroundTimeline" />
     </aside>
   </div>

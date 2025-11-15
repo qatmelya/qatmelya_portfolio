@@ -89,13 +89,15 @@ const canNext = computed(() => page.value < totalPages.value)
           class="py-5 flex flex-col gap-1 cursor-pointer group"
           @click="openPost(item.id)"
         >
-          <div class="flex items-baseline justify-between">
+          <div
+            class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-0"
+          >
             <h2
               class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-fuchsia-600 dark:group-hover:text-fuchsia-400 transition-colors"
             >
               {{ item.title }}
             </h2>
-            <time class="text-sm text-zinc-500 dark:text-zinc-400">{{
+            <time class="text-sm text-zinc-500 dark:text-zinc-400 md:ml-auto">{{
               new Date(item.date).toLocaleDateString()
             }}</time>
           </div>

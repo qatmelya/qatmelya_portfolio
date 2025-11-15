@@ -34,26 +34,26 @@ onMounted(async () => {
 </script>
 
 <template>
-  <main>
-    <section id="greeting" class="text-center mt-24 mx-auto w-4xl">
-      <h2 class="text-2xl">- Hi 👋</h2>
-      <h1 class="text-6xl mt-2">
+  <main class="overflow-x-hidden">
+    <section id="greeting" class="text-center mt-12 md:mt-24 mx-auto max-w-4xl px-4">
+      <h2 class="text-xl md:text-2xl">- Hi 👋</h2>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2">
         I'm <u class="text-fuchsia-900 dark:text-fuchsia-300">Melisa</u>,
       </h1>
-      <h1 class="text-4xl mt-4">
+      <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4">
         - a Full-Stack Developer & Data Enthusiast building smart digital solutions.
       </h1>
-      <p class="mt-8 text-xl">
+      <p class="mt-6 md:mt-8 text-base sm:text-lg md:text-xl px-2">
         I create modern <u><i>web applications</i></u
         >, intelligent <u><i>data pipelines</i></u
         >, and <u><i>user-friendly</i></u> digital experiences. With a background in backend,
         frontend, and AI integration, I turn ideas into working solutions that help businesses grow.
       </p>
     </section>
-    <section id="supporting-content" class="mt-16 px-4">
+    <section id="supporting-content" class="mt-12 md:mt-16 px-4">
       <div class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         <div>
-          <h2 class="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+          <h2 class="text-xl md:text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
             Recent Projects
           </h2>
           <div class="min-h-48">
@@ -65,7 +65,9 @@ onMounted(async () => {
           </div>
         </div>
         <div>
-          <h2 class="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">Services</h2>
+          <h2 class="text-xl md:text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+            Services
+          </h2>
           <div
             class="h-48 rounded-lg border border-dashed border-zinc-300 dark:border-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-400"
           >
